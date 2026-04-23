@@ -78,8 +78,8 @@ export function Footer() {
           {/* Пустая колонка для центрирования */}
           <div></div>
 
-          {/* Follow Us - выровнен под правыми карточками (Gymnastik) */}
-          <div className="text-right">
+           {/* Follow Us - выровнен под правыми карточками (Gymnastik) */}
+           <div id="follow-us" className="text-right">
             <h4 className="font-bold text-base mb-4 text-foreground">FOLLOW US</h4>
             <div className="flex gap-4 justify-end">
               <Link href="https://t.me/h_d_k_e_V" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
