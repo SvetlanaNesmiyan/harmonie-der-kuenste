@@ -18,7 +18,7 @@ const classes = [
     title: "Fußballgruppe",
     ageRange: "Gruppen:\n• Kinder\n• Jugendliche",
     image: "/images/tap-dance.jpg",
-    id: "fussballgruppe",
+    id: "fußballgruppe",
     description: "Unsere Fußballgruppe ist offen für alle Kinder und Jugendlichen, die Freude an Bewegung und Teamspiel haben.\n\nDie Teilnehmer lernen Grundlagen des Fußballs, Teamarbeit, Fairplay und verbessern ihre Ausdauer, Koordination und Technik."
   },
   {

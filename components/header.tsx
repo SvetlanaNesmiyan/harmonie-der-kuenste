@@ -14,7 +14,7 @@ const navItems = [
 const classesList = [
   { name: "Kickbox Training", id: "kickbox" },
   { name: "Tanzgruppe", id: "tanzgruppe" },
-  { name: "Fußballgruppe", id: "fussballgruppe" },
+  { name: "Fußballgruppe", id: "fußballgruppe" },
   { name: "Kreativwerkstatt - Alles selbst machen", id: "kreativwerkstatt" },
   { name: "Ukrainische Schule", id: "ukrainische-schule" },
   { name: "Gymnastik", id: "gymnastik" },
