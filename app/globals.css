@@ -1,0 +1,136 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Молочно-бежевый фон */
+  --background: oklch(0.96 0.02 72);
+  /* Тёмно-коричневый текст */
+  --foreground: oklch(0.32 0.04 58);
+  /* Светло-бежевый фон карточек */
+  --card: oklch(0.93 0.025 70);
+  --card-foreground: oklch(0.32 0.04 58);
+  --popover: oklch(0.96 0.02 72);
+  --popover-foreground: oklch(0.32 0.04 58);
+  /* Основной коричневый цвет */
+  --primary: oklch(0.47 0.07 62);
+  --primary-foreground: oklch(0.97 0.015 75);
+  /* Бежевый вторичный цвет */
+  --secondary: oklch(0.89 0.03 68);
+  --secondary-foreground: oklch(0.32 0.04 58);
+  /* Приглушённый молочный */
+  --muted: oklch(0.91 0.02 70);
+  --muted-foreground: oklch(0.52 0.04 56);
+  --accent: oklch(0.55 0.06 65);
+  --accent-foreground: oklch(0.97 0.015 75);
+  --destructive: oklch(0.62 0.14 35);
+  --destructive-foreground: oklch(0.97 0.015 75);
+  --border: oklch(0.85 0.03 68);
+  --input: oklch(0.92 0.025 70);
+  --ring: oklch(0.47 0.07 62);
+  --chart-1: oklch(0.58 0.08 60);
+  --chart-2: oklch(0.72 0.05 68);
+  --chart-3: oklch(0.42 0.05 55);
+  --chart-4: oklch(0.80 0.04 70);
+  --chart-5: oklch(0.65 0.06 63);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.30 0.04 58);
+  --sidebar-foreground: oklch(0.96 0.02 72);
+  --sidebar-primary: oklch(0.55 0.06 65);
+  --sidebar-primary-foreground: oklch(0.97 0.015 75);
+  --sidebar-accent: oklch(0.38 0.05 60);
+  --sidebar-accent-foreground: oklch(0.96 0.02 72);
+  --sidebar-border: oklch(0.45 0.05 62);
+  --sidebar-ring: oklch(0.55 0.06 65);
+}
+
+/* Коричневый сепия фильтр для всех изображений */
+@layer base {
+  img {
+    filter: sepia(0.45) saturate(0.8) hue-rotate(-10deg) contrast(1.05);
+  }
+
+  /* Hide scrollbar but keep scrolling functionality */
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Фоновый узор отключен */
+.floral-pattern {
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Фоновый узор со звёздами - мелкие, очень редко, хаотично и ярко */
+@keyframes starsFloat {
+  0% {
+    background-position: 0 0, 720px 490px, 300px 870px, 990px 330px, 560px 740px;
+  }
+  100% {
+    background-position: 2100px 1380px, 1560px 1880px, 2430px 1310px, 350px 2140px, 1810px 1040px;
+  }
+}
+
+.floral-pattern {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30.18,17.167L24,4l-6.18,13.167L4,19.279l10,10.249L11.639,44L24,37.167L36.361,44L34,29.528l10-10.249L30.18,17.167z M31.137,26.734l-1.41,1.445l0.325,1.992l1.035,6.342l-5.152-2.848L24,32.597l-1.935,1.07l-5.152,2.848l1.035-6.342l0.325-1.992l-1.41-1.445l-4.564-4.677l6.125-0.936l2.11-0.322l0.907-1.932L24,13.414l2.559,5.453l0.907,1.932l2.11,0.322l6.125,0.936L31.137,26.734z' fill='oklch(0.76 0.06 55 / 0.22)' /%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30.18,17.167L24,4l-6.18,13.167L4,19.279l10,10.249L11.639,44L24,37.167L36.361,44L34,29.528l10-10.249L30.18,17.167z M31.137,26.734l-1.41,1.445l0.325,1.992l1.035,6.342l-5.152-2.848L24,32.597l-1.935,1.07l-5.152,2.848l1.035-6.342l0.325-1.992l-1.41-1.445l-4.564-4.677l6.125-0.936l2.11-0.322l0.907-1.932L24,13.414l2.559,5.453l0.907,1.932l2.11,0.322l6.125,0.936L31.137,26.734z' fill='oklch(0.80 0.045 62 / 0.16)' transform='rotate(41 24 24)' /%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30.18,17.167L24,4l-6.18,13.167L4,19.279l10,10.249L11.639,44L24,37.167L36.361,44L34,29.528l10-10.249L30.18,17.167z M31.137,26.734l-1.41,1.445l0.325,1.992l1.035,6.342l-5.152-2.848L24,32.597l-1.935,1.07l-5.152,2.848l1.035-6.342l0.325-1.992l-1.41-1.445l-4.564-4.677l6.125-0.936l2.11-0.322l0.907-1.932L24,13.414l2.559,5.453l0.907,1.932l2.11,0.322l6.125,0.936L31.137,26.734z' fill='oklch(0.78 0.05 52 / 0.18)' transform='rotate(-59 24 24)' /%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30.18,17.167L24,4l-6.18,13.167L4,19.279l10,10.249L11.639,44L24,37.167L36.361,44L34,29.528l10-10.249L30.18,17.167z M31.137,26.734l-1.41,1.445l0.325,1.992l1.035,6.342l-5.152-2.848L24,32.597l-1.935,1.07l-5.152,2.848l1.035-6.342l0.325-1.992l-1.41-1.445l-4.564-4.677l6.125-0.936l2.11-0.322l0.907-1.932L24,13.414l2.559,5.453l0.907,1.932l2.11,0.322l6.125,0.936L31.137,26.734z' fill='oklch(0.84 0.032 68 / 0.13)' transform='rotate(89 24 24)' /%3E%3C/svg%3E");
+  background-size: 140px 140px, 200px 200px, 170px 170px, 230px 230px;
+  background-repeat: repeat;
+  z-index: 1;
+  
+  /* Очень медленная плавная анимация почти незаметная */
+  animation: starsFloat 520s linear infinite;
+  will-change: background-position;
+}
