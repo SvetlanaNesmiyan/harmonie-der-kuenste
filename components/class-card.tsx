@@ -25,12 +25,12 @@ export function ClassCard({ title, ageRange, image, id, description }: ClassCard
 
   return (
     <div className="relative group overflow-hidden" id={id}>
-      <div className="aspect-[4/3] relative">
+       <div className="aspect-[4/3] relative">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
+          className="object-contain transition-transform duration-500 group-hover:scale-105"
         />
         {/* Brown/sepia overlay for images */}
         <div className="absolute inset-0 bg-amber-900/50 group-hover:bg-amber-900/60 transition-colors mix-blend-multiply" />
