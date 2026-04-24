@@ -63,19 +63,19 @@ export function ClassCard({ title, ageRange, image, id, description }: ClassCard
 
       {/* Details overlay when active */}
       <div 
-        className={`absolute inset-0 bg-black/70 transition-all duration-500 flex flex-col items-center justify-center p-6 ${showDetails ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        className={`absolute inset-0 bg-black/70 transition-all duration-500 flex flex-col items-center justify-center p-4 sm:p-6 ${showDetails ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
       >
-        <div className="min-h-[170px] flex flex-col items-center justify-center">
-          <div className="text-white text-center leading-relaxed flex flex-col gap-4">
+        <div className="min-h-[170px] flex flex-col items-center justify-center w-full px-2">
+          <div className="text-white text-center leading-relaxed flex flex-col gap-3 max-w-full">
             {description ? (
               description.split('\n\n').map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+                <p key={index} className="text-xs sm:text-sm md:text-base lg:text-sm xl:text-base leading-relaxed">{paragraph}</p>
               ))
             ) : (
               <>
-                <p>Unser Kickbox-Training verbindet Sport, Fitness und Selbstverteidigung.</p>
-                <p>Die Kinder und Jugendlichen lernen wichtige Techniken zur Selbstverteidigung, verbessern ihre körperliche Fitness und stärken Disziplin sowie Selbstvertrauen.</p>
-                <p>Das Training fördert Ausdauer, Kraft, Koordination und Konzentration in einer sicheren und motivierenden Umgebung.</p>
+                <p className="text-xs sm:text-sm md:text-base lg:text-sm xl:text-base leading-relaxed">Unser Kickbox-Training verbindet Sport, Fitness und Selbstverteidigung.</p>
+                <p className="text-xs sm:text-sm md:text-base lg:text-sm xl:text-base leading-relaxed">Die Kinder und Jugendlichen lernen wichtige Techniken zur Selbstverteidigung, verbessern ihre körperliche Fitness und stärken Disziplin sowie Selbstvertrauen.</p>
+                <p className="text-xs sm:text-sm md:text-base lg:text-sm xl:text-base leading-relaxed">Das Training fördert Ausdauer, Kraft, Koordination und Konzentration in einer sicheren und motivierenden Umgebung.</p>
               </>
             )}
           </div>
