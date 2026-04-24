@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from "react"
 const classLinks = [
   { name: "KICKBOX TRAINING", id: "kickbox" },
   { name: "TANZGRUPPE", id: "tanzgruppe" },
-  { name: "FUßbALLGRUPPE", id: "fussballgruppe" },
+  { name: "FUßBALLGRUPPE", id: "fussballgruppe" },
   { name: "KREATIVWERKSTATT - ALLES SELBST MACHEN", id: "kreativwerkstatt" },
   { name: "UKRAINISCHE SCHULE", id: "ukrainische-schule" },
   { name: "GYMNASTIK", id: "gymnastik" },
